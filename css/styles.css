@@ -1,0 +1,176 @@
+/*
+ * color scheme :
+ * #FFFAE8 white
+ * #C9C1B4 light grey
+ * #3F3C38 grey
+ * #242321 dark grey
+ * #c13c5b pink
+ *
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+/* native */
+
+body {
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-color: #fffae8;
+  color: #242321;
+  line-height: 20px;
+}
+
+h1 {
+  width: 100%;
+  font-family: "Teko", sans-serif;
+  color: #242321;
+  font-size: 50px;
+  line-height: 35px;
+}
+
+h2 {
+  width: 100%;
+  color: #242321;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+h3 {
+  width: 100%;
+  font-size: 20px;
+  color: #3f3c38;
+  line-height: 100px;
+}
+
+h4 {
+  width: 100%;
+  font-size: 16px;
+  color: #c13c5b;
+  line-height: 65px;
+}
+
+p {
+  margin: 5px 0;
+  text-align: justify;
+}
+
+ul {
+  list-style: inside square;
+  line-height: 28px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* main-wrapper */
+
+#main-wrapper{
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+  width: 90%;
+}
+
+/* header & sections */
+
+header.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+header.showcase .identity {
+  flex-grow: 1;
+}
+
+header.showcase .photo {
+  height: 100%;
+}
+
+header.showcase .photo img {
+  height: 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+/* main */
+
+main {
+  display: grid;
+  grid-template-columns: 33% 33% auto;
+  grid-gap: 40px;
+}
+
+section.skillset .content .levels .skill {
+  display: flex;
+  align-items: center;
+}
+
+section.skillset .content .levels .skill .name {
+  width: 95px;
+}
+
+section.skillset .content .levels .skill span.level {
+  width: 124px;
+  height: 24px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
+  background-position: 0 top, 20px top, 40px top, 60px top, 80px top, 100px top;
+}
+
+section.skillset .content .levels .skill span.level.value-2 {
+  background-image: url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_empty.svg"),
+    url("../images/square_empty.svg"), url("../images/square_empty.svg"),
+    url("../images/square_empty.svg");
+}
+
+section.skillset .content .levels .skill span.level.value-3 {
+  background-image: url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_full.svg"),
+    url("../images/square_empty.svg"), url("../images/square_empty.svg"),
+    url("../images/square_empty.svg");
+}
+
+section.skillset .content .levels .skill span.level.value-4 {
+  background-image: url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_empty.svg"),
+    url("../images/square_empty.svg");
+}
+
+section.skillset .levels .skill span.level.value-5 {
+  background-image: url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_full.svg"),
+    url("../images/square_empty.svg");
+}
+
+section.skillset .content .levels .skill span.level.value-6 {
+  background-image: url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_full.svg"),
+    url("../images/square_full.svg"), url("../images/square_full.svg"),
+    url("../images/square_full.svg");
+}
+
+section.skillset .content .others {
+  height: fit-content;
+  max-width: 219px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+section.skillset .content .others .skill {
+  color: #fffae8;
+  background-color: #242321;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 25px;
+  height: fit-content;
+  padding: 8px;
+  font-weight: bold;
+}

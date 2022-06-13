@@ -1,0 +1,389 @@
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Julien Jacquart</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+      // download pdf format
+      const { jsPDF } = window.jspdf;
+      const downloadPdf = (quality = 1) => {
+        html2canvas(document.body, {scale: quality}).
+        then(canvas => {
+          // 211mm = A4 width
+          let w = 211, h = w * (canvas.height / canvas.width);
+          let pdf = new jsPDF('p', 'mm', [w, h]);
+          pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, w, h);
+          pdf.save("cv-jjacquart-" + Date.now());
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="main-wrapper">
+      <header class="showcase">
+        <div class="photo">
+          <img src="./images/profile.jpg" alt="photo">
+        </div>
+        <div class="identity">
+          <h1>Julien Jacquart</h1>
+          <h2>Développeur</h2>
+        </div>
+        <div class="contact">
+          <img src="./images/contact.jpg" alt="contact" />
+        </div>
+        <div class="pdf" data-html2canvas-ignore="true">
+          <a href="javascript:downloadPdf(2)">
+            <img src="./images/pdf.png" alt="télécharger PDF">
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <div class="bloc b1">
+          <section>
+          <h3>Experience</h3>
+          <div class="content">
+            <article>
+              <header>
+                <h4>Développeur PHP Symfony</h4>
+                <p>
+                <span class="date">jan.2022 / mai.2022</span>
+                <span class="company">- Additi</span>
+                <span class="location">- Rennes</span>
+                </p>
+              </header>
+              <p class="description">Conception, écriture des spécifications et développement d'une API pour les services de l'entreprise. Tests unitaires avec PHPUnit. Utilisation de Docker.</p>
+            </article>
+
+            <article>
+              <header>
+                <h4>Développeur Freelance</h4>
+                <p>
+                <span class="date">2020 / 2021</span>
+                <span class="company">- Indépendant</span>
+                <span class="location">- Rennes</span>
+                </p>
+              </header>
+              <p class="description">Divers missions en tant que développeur PHP, Javascript et Wordpress.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Concepteur / Développeur Unity</h4>
+                <p>
+                <span class="date">2014 / 2020</span>
+                <span class="company">- Indépendant</span>
+                <span class="location">- Rennes</span>
+                </p>
+              </header>
+              <p class="description">Conception et développement du jeu vidéo Super Battle Kube. Utilisation polyvalente de Unity. Programmation en C#.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur PHP</h4>
+                <p>
+                <span class="date">oct.2017 / avr.2018</span>
+                <span class="company">- Site En Ligne</span>
+                <span class="location">- Chantepie</span>
+                </p>
+              </header>
+              <p class="description">Développement de nouvelles fonctionnalités et maintenance d'un intranet pour un client de l'entreprise.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur PHP</h4>
+                <p>
+                <span class="date">fev.2013 / nov.2013</span>
+                <span class="company">- Vorwerk</span>
+                <span class="location">- Nantes</span>
+                </p>
+              </header>
+              <p class="description">Analyse des besoins et des spécifications et développement d'outils internet/intranet pour les différents services de l'entreprise.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur PHP</h4>
+                <p>
+                <span class="date">oct.2012 / jan.2013</span>
+                <span class="company">- CIRTI</span>
+                <span class="location">- Nantes</span>
+                </p>
+              </header>
+              <p class="description">Analyse des besoins et des spécifications pour le développement et l'intégration de composants logiciels, tests et amélioration de la sécurité des sites.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur Web full-stack</h4>
+                <p>
+                <span class="date">jan.2012 / avr.2012</span>
+                <span class="company">- Image</span>
+                <span class="location">- La Baule</span>
+                </p>
+              </header>
+              <p class="description">Développement de sites Internet, intégration, exports de catalogues clients vers des sites marchands (e-commerce.)</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur Web full-stack</h4>
+                <p>
+                <span class="date">mar. 2011 / sep. 2011</span>
+                <span class="company">- Digital Garden</span>
+                <span class="location">- Nantes</span>
+                </p>
+              </header>
+              <p class="description">Développement de sites Internet (programmation, découpage et intégration), de type e-commerce principalement, pour les clients de l’entreprise.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur PHP</h4>
+                <p>
+                <span class="date">sep.2009 / sep.2010</span>
+                <span class="company">- 5sur5</span>
+                <span class="location">- Chartres</span>
+                </p>
+              </header>
+              <p class="description">Analyse, Développement, gestion des Bases de données et assistance technique pour les applications intranet de l’entreprise (CRM, gestionnaire d’embauche, outils d’administration, outils pour les réseaux)</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Développeur Web</h4>
+                <p>
+                <span class="date">fev.2009 / mai.2009</span>
+                <span class="company">- Blouzar</span>
+                <span class="location">- Londres</span>
+                </p>
+              </header>
+              <p class="description">Développements pour le jeu en ligne MissBimbo.com</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Assistant d'étude</h4>
+                <p>
+                <span class="date">oct.2008 / dec.2008</span>
+                <span class="company">- CETE de l'est</span>
+                <span class="location">- Strasbourg</span>
+                </p>
+              </header>
+              <p class="description">Intervention sur la conception d’un système d’étalonnage pour la technologie ECODYN (Système embarqué d’analyse de la visibilité des marquages routiers): Analyse des besoins, rédaction des spécifications, développement de classes C++ pour la gestion de la carte d’acquisition et encadrement d’un stagiaire.</p>
+            </article>
+            
+            <article>
+              <header>
+                <h4>Webmestre</h4>
+                <p>
+                <span class="date">nov.2007 / mar.2008</span>
+                <span class="company">- Culture O Centre</span>
+                <span class="location">- Orléans</span>
+                </p>
+              </header>
+              <p class="description">Recette informatique, administration, modifications des données et des contenus, assistance informatique, gestion du serveur et de la base de données.</p>
+            </article>
+          </div>
+          </section>
+        </div>
+
+        <div class="bloc b2">
+          <section>
+            <h3>Formations</h3>
+
+            <article>
+              <header>
+                <h4>Licence RESTEL</h4>
+                <p>
+                <span class="location">Orléans - IUT Orléans</span>
+                </p>
+              </header>
+              <p class="description">Licence professionnelle Réseaux et Télécommunications option internet. En alternance d'un an dans l'entreprise 5 sur 5 en tant que développeur PHP.</p>
+            </article>
+
+            <article>
+              <header>
+                <h4>BTS IRIS</h4>
+                <p>
+                <span class="location">Vierzon - lycée Henri Brisson</span>
+                </p>
+              </header>
+              <p class="description">BTS Informatique et Réseaux pour l'Industrie et les Services Techniques</p>
+            </article>
+
+            <article>
+              <header>
+                <h4>Baccalauréat STI Génie Electronique</h4>
+                <p>
+                <span class="location">Ingré - lycée Maurice Genevoix</span>
+                </p>
+              </header>
+              <p class="description">Baccalauréat STI Génie Electronique</p>
+            </article>
+
+          </section>
+    
+          <section>
+            <h3>Intérêts et pratiques</h3>
+            <ul>
+              <li>Musique (pratique et composition)</li>
+              <li>Arts</li>
+              <li>3D</li>
+              <li>Développement de jeux</li>
+              <li>Sciences (vulgarisation)</li>
+              <li>Jeux vidéo</li>
+            </ul>
+          </section>
+    
+        </div>
+
+        <div class="bloc b3">
+          <section class="skillset">
+            <h3>Compétences</h3>
+    
+            <div class="content">
+              <div class="levels">
+                <h4>Langages</h4>
+                <div class="skill">
+                  <span class="name">html</span>
+                  <span class="level value-5"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">css</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">javascript</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">typescript</span>
+                  <span class="level value-3"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">react</span>
+                  <span class="level value-3"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">php </span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">sql</span>
+                  <span class="level value-3"></span>
+                </div>
+              </div>
+
+              <div class="levels">
+                <h4>Technos</h4>
+                <div class="skill">
+                  <span class="name">git</span>
+                  <span class="level value-3"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">docker</span>
+                  <span class="level value-2"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">nodejs</span>
+                  <span class="level value-2"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">express</span>
+                  <span class="level value-2"></span>
+                </div>
+              </div>
+
+              <div class="levels">
+                <h4>Méthodologies</h4>
+                <div class="skill">
+                  <span class="name">poo</span>
+                  <span class="level value-5"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">uml</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">tdd</span>
+                  <span class="level value-3"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">api rest</span>
+                  <span class="level value-3"></span>
+                </div>
+              </div>
+    
+              <div class="levels">
+                <h4>Capacités</h4>
+                <div class="skill">
+                  <span class="name">anglais</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">découpage</span>
+                  <span class="level value-5"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">intégration</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">arch. logicielle</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">conception</span>
+                  <span class="level value-4"></span>
+                </div>
+                <div class="skill">
+                  <span class="name">spécifications</span>
+                  <span class="level value-4"></span>
+                </div>
+              </div>
+    
+              <div class="others">
+                <h4>Autres</h4>
+                <div class="skill">linux</div>
+                <div class="skill">debian</div>
+                <div class="skill">mongodb</div>
+                <div class="skill">c</div>
+                <div class="skill">c++</div>
+                <div class="skill">c#</div>
+                <div class="skill">unity</div>
+                <div class="skill">symfony</div>
+                <div class="skill">sass</div>
+                <div class="skill">responsive</div>
+                <div class="skill">wordpress</div>
+                <div class="skill">joomla</div>
+                <div class="skill">bootstrap</div>
+                <div class="skill">jquery</div>
+                <div class="skill">ajax</div>
+                <div class="skill">photoshop</div>
+                <div class="skill">gimp</div>
+                <div class="skill">blender</div>
+                <div class="skill">cubase</div>
+              </div>
+            </div>
+          </section>
+      
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
+

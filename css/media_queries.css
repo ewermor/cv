@@ -1,0 +1,35 @@
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (max-width: 992px) {
+  .bloc.b1{ order: 2; }
+  .bloc.b2{ order: 3; }
+  .bloc.b3{ order: 1; }
+
+  main {
+    grid-template-columns: auto;
+    grid-gap: 0;
+  }
+
+  .skillset .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 35px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 440px) {
+  header.showcase .photo {
+    display: none;
+  }
+
+  #main-wrapper{
+    padding-top : 20px;
+  }
+}
